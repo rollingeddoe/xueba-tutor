@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link href="/styles/true-tutor.css" rel="stylesheet" />
+        <title>Xue-ba tutor</title>
+    </head>
+    <body>
+        {{>header}}
+        <div class="profile">
+            <!-- mainbody -->
+            <div class="profile-title">
+                <div class="card">
+                    <!-- top -->
+                    <div class="cover"></div>
+                    <div class="wrapper">
+                        <div class="wrapper-inner">
+                            <div>
+                                <div class="userphoto" style="top: -74px;">
+                                    <img class="photo" src="/img/time square.jpg"/>
+                                </div>
+                            </div>
+                            <div class="profile-header">
+                                <div class="firstname">
+                                    <h1 class="name">
+                                        <span>{{user.firstname}}</span>
+                                    </h1>
+                                </div>
+
+                                <div class="lastname">
+                                    <h1 class="name">
+                                        <span>{{user.lastname}}</span>
+                                    </h1>
+                                </div>
+
+                                <div class="username">
+                                    <h1 class="name">
+                                        <span>{{user.username}}</span>
+                                    </h1>
+                                </div>
+
+                                <div class="edit-button">
+                                    <button class="edit-button-content">
+                                        Edit Profile
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-main">
+
+                <div class="profile-mainCol">
+                    <div class="card ProfileMain">
+                        <div class="profileMain-header">
+                            <li class="tab">
+                                <a class="profile-item" herf="">Your tutor sections</a>
+                                <div class="indicator"><div>
+                            </li>
+                            {{!-- <li class="tab">
+                                <a class="profile-item" herf="">Past tutoring</a>
+                            </li> --}}
+                        </div>
+                        <div class="profile-act">
+
+
+                            {{!-- {{#if his}}
+                                    {{>profsec}}
+                            {{/if}}
+
+                            <div class="list-item">                            
+                                {{#if his}}
+                                    {{>profsec}}
+                                {{/if}}
+                            </div> --}}
+                            <div class="list-item">                            
+                                <h1 class="time">Time </h1>
+                                <h2 class="tutor">Tutor</h2>
+                            </div>
+                            <div class="list-item">                            
+                                <h1 class="time">Time </h1>
+                                <h2 class="tutor">Tutor</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-sideCol">
+
+                    <div class="card total-profile">
+                        <div class="rating">
+                            Rating
+                        </div>
+                        <div class="rating-info">
+                            {{user.rating}} / 5 
+                        </div>
+                    </div>
+
+                    <div class="card total-profile">
+                        <div class="status">
+                            Status
+                        </div>
+                        <div class="status-info">
+                            {{user.status}}
+                        </div>
+                    </div>
+{{!-- submit section form for tutor --}}
+                    {{#if tutor}}
+                    <div class="card total-profile">
+
+                        <div class="submit-section">
+                            <div class="post-sections">
+                                <h>Submit A Section</h>
+                            </div>
+                        </div>
+
+
+                        <form class="submitflow"  method="POST" class="submit-form form" id="subSection">                    
+                            <div class="box account">
+                                <div class="input-acc">
+                                    <input class="username" type="text" name="username" value="{{tutor}}" readonly> 
+                                </div>
+                            </div>
+                            <div class="box account">
+                                <div class="input-acc">
+                                    CourseID:
+                                    <input class="courseID" type="text" name="CourseID" min="1" max="5" placeholder="6 digit courseID, refer list  on 'Find a Tutor' " required> 
+                                </div>
+                            </div>
+                            <div class="box account">
+                                <div class="input-acc">
+                                    StartTime:
+                                    <input class="StartTime" type="date" name="StartTime" id = "Record_starttime" min="2019-01-1" max="2019-12-31" placeholder="StartTime" onchange = "checktime()" required>
+                                </div>
+                            </div>
+                            <div class="box account">
+                                <div class="input-acc">
+                                    EndTime:
+                                    <input class="EndTime" type="date" name="EndTime" id = "Record_endtime" min="2019-01-1" max="2019-12-31" placeholder="EndTime must be larger than StartTime" onchange = "checktime()" required>
+                                </div>
+                            </div>
+                            <div class="box account">
+                                <div class="input-acc">
+                                    TuitionFee:
+                                    <input class="TuitionFee" type="number" min="0" max="40" name="TuitionFee" placeholder="0 for negotiable" required>
+                                </div>
+                            </div>
+                            <div class="box account">
+                                <div class="input-acc">
+                                    Intro:
+                                    <textarea rows="4" cols="50" name="Intro" form="subSection" spellcheck="true" placeholder="write something about yourself and the section you will be teaching">
+                                    </textarea> 
+                                </div>
+                            </div>
+                        
+                            <input type="submit" class="button-submit" id="submitbtn" form="subSection" value="Submit Section" formaction="/profile">
+                           
+                        </form>
+
+                        {{#if postMessage}}
+                        <div class="errorMessage">
+                            {{postMessage}}
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+
+                    
+            
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

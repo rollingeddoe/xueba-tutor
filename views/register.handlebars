@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/styles/xueba-login.css" rel="stylesheet" />
+        <title>Xue-ba signup</title>
+    </head>
+    <body>
+        {{>header}}
+
+        <div class="login-main">
+            <div class="signin">
+                <div class="card loginwindow">
+                    <div class="signHeader">
+                            <img viewbox="0 0 209 91"  src="/img/xueba.png"/>
+                    </div>
+                    <div class="signInner">
+                        <div class="login-content">
+                            <form class="signflow" method="POST" class="login-form form">
+
+                                <div class="box firstname">
+                                    <div class="input-acc" style="height: 26px;">
+                                        <input class="firstname" type="text" name="firstname" placeholder="firstname">
+                                    </div>
+                                </div>
+
+                                <div class="box lastname">
+                                    <div class="input-acc" style="height: 26px;">
+                                        <input class="lastname" type="text" name="lastname" placeholder="lastname">
+                                    </div>
+                                </div>
+                                
+                                <div class="box account">
+                                    <div class="input-acc" style="height: 26px;">
+                                        <input class="username" type="text" name="username" placeholder="email, a Rutgers email will be auto-vrified">
+                                    </div>
+                                </div>
+                                <div class="box key">
+                                    <div class="input-pass" style="height: 26px;">
+                                        <input class="password" type="text" name="password" placeholder="password">
+                                    </div>
+                                </div>
+                                <button  type="submit" class="button-signin" id="signbtn">Sign Up</button>
+                                {{#if registerMessage}}
+                                <div class="errorMessage">
+                                    {{registerMessage}}
+                                </div>
+                                {{/if}}
+                            </form>
+                        </div>
+                        <div class="switch" >
+                            <h4 class="switchdis" id="change2"> Already have an account?  </h4>
+                            <Span onclick="switchsign()" id="change">Log In</Span>
+                        </div>
+                    </div>
+                </div> 
+            </div>    
+        </div>
+        
+        <script src="/js/xueba.js"></script>
+    </body>
+</html>

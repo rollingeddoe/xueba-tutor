@@ -1,0 +1,16 @@
+{{#each transactions}}
+<div class="list">
+    <div class="pic">
+        <img src="/img/Edison.png">
+        <h4>{{firstname}}</h4>
+    </div>
+    <div class="info">
+        <li>Course: {{CourseName}}</li>
+        <li>Time: {{StartTime}} - {{EndTime}}</li>
+        <li>Price: {{TuitionFee}}/hour</li>
+        <li>Self-intro: {{Intro}}</li>
+    </div>
+    <button class="btn endButton">End Section</button>
+</div>
+<script src="/js/xueba.js" ></script>
+{{/each}}

@@ -1,0 +1,30 @@
+{
+  "name": "Xueba_Tutor",
+  "version": "1.0.0",
+  "description": "Want a GPA 4.0?",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development node server.js"
+  },
+  "author": "Ding Chen, Ning Hu, Xunkai Zhang, Yutong Chen, Sihan Chen",
+  "license": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23",
+    "mysql": "^2.16.0",
+    "nodemod": "^1.5.19",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "request-ip": "^2.1.3"
+  },
+  "devDependencies": {
+  
+  }
+}

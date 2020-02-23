@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link href="styles/xueba-login.css" rel="stylesheet" />
+        <title>Xue-ba Error pages</title>
+    </head>
+    <body>
+        {{>header}}
+        <div class="login-main">
+            <div class="signin">
+                <div class="card error-page">
+                    <div class="fourOfour">
+                        <h1>{{errorcode}}</h1>
+                    </div>
+                    <div class="signInner">
+                        <div class="login-content">
+                            <h2>Sorry, {{action}} </h2>
+                            <h2>https://xueba-tutor.herokuapp.com{{url}}<h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

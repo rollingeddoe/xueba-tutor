@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/styles/xueba-login.css" rel="stylesheet" />
+        <title>Xue-ba login</title>
+    </head>
+    <body>
+        {{>header}}
+       
+        <div class="login-main">
+            <div class="signin">
+                <div class="card loginwindow">
+                    <div class="signHeader">
+                           <img viewbox="0 0 209 91"  src="/img/xueba.png"/>
+                    </div>
+                    <div class="signInner">
+                        <div class="login-content">
+                            <form class="signflow" method="POST" class="login-form form">
+                              
+                                <div class="box account">
+                                    <div class="input-acc" style="height: 26px;">
+                                        <input class="username" type="text" name="username" placeholder="email">
+                                    </div>
+                                </div>
+                                <div class="box key">
+                                    <div class="input-pass" style="height: 26px;">
+                                        <input class="password" type="password" name="password" placeholder="password">
+                                    </div>
+                                </div>
+                                <button type="submit" class="button-signin" id="signbtn">Log In</button>
+                                {{#if loginMessage}}
+                                <div class="errorMessage">
+                                    {{loginMessage}}
+                                </div>
+                                {{/if}}
+                            </form>
+                        </div>
+                        <div class="switch" >
+                            <h4 class="switchdis" id="change2"> Do not have an accout?  </h4>
+                            <Span onclick="switchsign()" id="change">Sign Up</Span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/xueba.js" ></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{{#each sections}}
+<div class="list">
+    <div class="pic">
+        <img src="/img/Edison.png">
+        <h4>{{firstname}}</h4>
+    </div>
+    <div class="info">
+        <li>Course: {{CourseName}}</li>
+        <li>Time: {{StartTime}} - {{EndTime}}</li>
+        <li>Role: Tutor</li>
+        <li>Class-Status: {{Status}}</li>
+    </div>
+    {{!-- <form  method="POST" id="book{{SectionID}}">
+        <input type="hidden" autocomplete="off" name="sectionID" value="{{SectionID}}"> 
+        <input type="hidden" autocomplete="off" name="sectionStatus" value="{{Status}}"> 
+            <input type="submit" form="book{{SectionID}}" class="btn bookButton"  value="Book Section">
+    </form> --}}
+    {{!-- <button class="btn bookButton">Book Section</button> --}}
+    {{!-- <input type="book" formaction="/search/section" class="btn bookButton" id="bookBtn" value="Book Section"> --}}
+  
+
+    {{!-- {{#if bookMessage}}
+    <div class="errorMessage">
+        {{bookMessage}}
+
+    </div>
+    {{/if}} --}}
+</div>
+
+
+{{/each}}

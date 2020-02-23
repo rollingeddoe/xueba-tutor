@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xueba-Tutor</title>
+        <link href="/styles/homepage.css" rel="stylesheet" />
+        {{!-- <link href="/styles/xueba-login.css" rel="stylesheet" /> --}}
+    </head>
+    <body>
+        <div class="header">
+            <a href="/" class="label">
+                <img viewbox="0 0 250 100" class="logo" src="/img/xueba.png" />
+            </a>
+        </div>
+        <div class="nav">
+            <a class="nav-item" href="/search">Find a Tutor</a>
+            <a class="nav-item" href="/apply" target="_blank">Become a Tutor</a>
+            <a class="nav-item" href="/profile">Profile</a>
+            <a class="nav-item" href="/login" style="float:right">Log In</a>
+            <div class="searchBar">
+                <form action="/search/section" class="searchTool" id="navSearch" method="GET">
+                    <div class="searchInput"> 
+                        <input type="text" class="tutor-input" name="course" placeholder="type the 6 digit coursesID to find a tutor">
+                    </div>
+                </form>
+                <input type="submit" class="btn searching" form="navSearch"  value="Search">
+           </div>
+            {{!-- <a href="#" style="float:right">Log Out</a> --}}
+        </div>
+
+        <div class="lists">
+            <h3>Section List</h3>
+
+            {{#if NOTutor}}
+                <div class="errorMessage">
+                    {{NOTutor}}
+                </div>
+            {{/if}}
+
+            {{#if bookMessage}}
+                <div class="errorMessage">
+                {{bookMessage}}
+                </div>
+            {{/if}}
+      
+            {{#if sections}}
+                {{>section}}
+            {{/if}}
+
+            <a href="https://xueba-tutor.herokuapp.com/search/" class="btn gobookButton">Find Your Course and Tutor Here!</a>
+            {{!-- <a href="#" id="loadMore">Load More</a>
+            <a href="#" id="showless">Show Less</a> --}}
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/js/xueba.js"></script>
+    </body>
+</html>
